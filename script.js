@@ -1,4 +1,3 @@
-
 let computerScore = 0;
 let humanScore = 0;
 
@@ -23,6 +22,22 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    const humanChoiceToLowerTxt = text.toLowerCase(humanChoice)
-    
+    humanChoice = humanChoice.toLowerCase();
+
+    if (humanChoice === computerChoice) {
+        console.log("Draw! You both selected the same thing");
+        console.log(`Player score: ${humanScore} vs. Computer score: ${computerScore}`)
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        console.log("You won! What you selected beat the computer's choice");
+        humanScore += 1;
+        console.log(`Player score: ${humanScore} vs. Computer score: ${computerScore}`)
+    } else {
+        console.log("You lose! What the computer selected beat your choice");
+        computerScore += 1;
+        console.log(`Player score: ${humanScore} vs. Computer score: ${computerScore}`)
+    }
 }
