@@ -14,3 +14,9 @@ This project aims to showcase my foundational knowledge of JavaScript by impleme
 - String Methods
 - Increment Operators
 - Console Output
+
+## Final Result
+
+Below is a sample of the game being played in web's console:
+
+<img src="./console-rock-paper-scissors-game.png" alt="Console Rock Paper Scissors Game" width="600">
